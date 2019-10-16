@@ -1,6 +1,7 @@
 <?php
 
 include_once 'mailsend.php';
+include_once 'config.php';
 
 // EDIT THE 2 LINES BELOW AS REQUIRED
 $email_to = "xJaquar@gmail.com";
@@ -74,3 +75,10 @@ $headers = 'From: ' . $email_from . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
 
 Mail::sendMail($email_subject, $email_message, $email_to);
+
+$query ="INSERT INTO `Contact_Submissions`(`First_Name`, `Last_Name`, `Email`, `Phone_Number`, `Message`) VALUES ('$first_name', '$last_name', '$email_from' , '$telephone', '$comments')";
+if (mysqli_query($db, $query)) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $query . "<br>" . mysqli_error($db);
+}
