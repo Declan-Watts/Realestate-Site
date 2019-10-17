@@ -38,19 +38,6 @@ $final_image = rand(1000, 1000000) . $img;
 $db_path = $db_path . strtolower($final_image);
 
 upload_image($ext, $valid_extensions, $path, $final_image, $db_path, $tmp);
-// $query = "START TRANSACTION;
-
-// SELECT
-//     @House_ID:=MAX(House_ID)+1
-// FROM
-//     Houses;
-
-// INSERT INTO `Houses` (`House_ID`, `Status`, `Bedrooms`, `Landarea`, `Bathrooms`, `Garage`, `Carparks`, `Dinning`, `Lounge`, `Thumbnail`, `SaleType`, `Description`, `Region`, `City`, `Suburb`, `Closing_Date`, `Listing_Date`, `Addr`, `Post`) VALUES (NULL, 'For Sale', $Bedrooms, $LArea, $Bathrooms, $Garage, $CarPark, $Dinning, $Lounge, '$final_image', '$SaleType', '$description', '$Region', '$City', '$Suburb', '$CloseDate', CURRENT_TIMESTAMP, '$Address', $Postcode);
-
-// INSERT INTO Agent_Houses (Agent_ID, House_ID) VALUES ($agent_sel, @House_ID);
-
-// COMMIT;
-// ";
 
 $query = "SELECT @House_ID:=MAX(House_ID)+1 FROM Houses;";
 $result = mysqli_query($db, $query);
