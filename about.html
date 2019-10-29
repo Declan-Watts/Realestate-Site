@@ -25,6 +25,8 @@
 		></script>
 		<!-- CSS SHEET -->
 		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://kit.fontawesome.com/99d10b5ee7.js"></script>
+
 		<!-- SITE TITLE -->
 		<title>About - Pristine Properties</title>
 	</head>
@@ -64,6 +66,11 @@
 							<a href="dashboard/login.html" class="nav-link">Login</a>
 						</li>
 						<li class="nav-item">
+							<a onclick="load_wishlist()" class="nav-link"
+								><i class="fas fa-heart"></i
+							></a>
+						</li>
+						<li class="nav-item">
 							<a href="bread.html" class="nav-link bread">Learn</a>
 						</li>
 					</ul>
@@ -92,52 +99,6 @@
 			<!-- END OF HEADER-->
 		</header>
 
-		<section class="py-5" style="top:95%">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="card mx-auto" style="width: 18rem;">
-						<img src="..." class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">
-								Some quick example text to build on the card title and make up
-								the bulk of the card's content.
-							</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="card mx-auto" style="width: 18rem;">
-						<img src="..." class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">
-								Some quick example text to build on the card title and make up
-								the bulk of the card's content.
-							</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="card mx-auto" style="width: 18rem;">
-						<img src="..." class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">
-								Some quick example text to build on the card title and make up
-								the bulk of the card's content.
-							</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<footer>
 			<div class="container-fluid">
 				<div class="row" style="margin-top:10px">
@@ -161,6 +122,6 @@
 			</div>
 			<!-- End of Footer -->
 		</footer>
-		<script src="https://kit.fontawesome.com/99d10b5ee7.js"></script>
 	</body>
+	<script src="js/wishlist.js"></script>
 </html>

@@ -14,6 +14,11 @@ $(document).ready(function(e) {
 			before: function(e) {},
 			success: function(pre_result) {
 				console.log(pre_result);
+				if (pre_result == 'New record created successfully') {
+					window.location.replace(
+						'http://school.ddtuitions.com/dashboard/properties_admin.html'
+					);
+				}
 			},
 			error: function(e) {}
 		});
@@ -32,6 +37,11 @@ $(document).ready(function(e) {
 			before: function(e) {},
 			success: function(pre_result) {
 				console.log(pre_result);
+				if (pre_result == 'New record created successfully') {
+					window.location.replace(
+						'http://school.ddtuitions.com/dashboard/properties_admin.html'
+					);
+				}
 			},
 			error: function(e) {}
 		});
@@ -49,7 +59,11 @@ $(document).ready(function(e) {
 			processData: false,
 			before: function(e) {},
 			success: function(pre_result) {
-				console.log(pre_result);
+				if (pre_result == 'New Entry Success') {
+					window.location.replace(
+						'http://school.ddtuitions.com/dashboard/properties_admin.html'
+					);
+				}
 			},
 			error: function(e) {}
 		});

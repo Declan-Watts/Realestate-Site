@@ -20,6 +20,7 @@ $path = '../img/company_thumb/';
 $db_path = 'dashboard/assets/img/company_thumb/';
 $ext = strtolower(pathinfo($img, PATHINFO_EXTENSION));
 $final_image = rand(1000, 1000000) . $img;
+$final_image = strtolower($final_image);
 $db_path = $db_path . strtolower($final_image);
 
 upload_image($ext, $valid_extensions, $path, $final_image, $db_path, $tmp);
