@@ -161,7 +161,11 @@
 					>
 						<div class="carousel-caption d-none d-md-block">
 							<h2 class="display-4">Buy your property with us</h2>
-							<p class="lead">Buying a home is a big step and there can be a lot to consider. At Pristine Properties we believe it should be one of the most fulfilling experiences of your life.</p>
+							<p class="lead">
+								Buying a home is a big step and there can be a lot to consider.
+								At Pristine Properties we believe it should be one of the most
+								fulfilling experiences of your life.
+							</p>
 						</div>
 					</div>
 					<!-- Slide Two - Set the background image for this slide in the line below -->
@@ -171,7 +175,11 @@
 					>
 						<div class="carousel-caption d-none d-md-block">
 							<h2 class="display-4">Rent your property with us</h2>
-							<p class="lead">Whether you are looking to rent your first home, or seeking a property management service, we will help you understand the process, and get all the facts!</p>
+							<p class="lead">
+								Whether you are looking to rent your first home, or seeking a
+								property management service, we will help you understand the
+								process, and get all the facts!
+							</p>
 						</div>
 					</div>
 					<!-- Slide Three - Set the background image for this slide in the line below -->
@@ -181,7 +189,10 @@
 					>
 						<div class="carousel-caption d-none d-md-block">
 							<h2 class="display-4">Find an agent</h2>
-							<p class="lead">With over 195 offices across New Zealand, one of our specialists are ready to help you with your property needs.</p>
+							<p class="lead">
+								With over 195 offices across New Zealand, one of our specialists
+								are ready to help you with your property needs.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -208,16 +219,139 @@
 		<!-- End Carousel -->
 		<!-- Page Content -->
 		<section class="py-5">
+			<!-- Property Title/Address -->
 			<div class="container">
-				<h1 class="display-4" style="padding-bottom: 300px;">
-					Full Page Image Slider
-				</h1>
-				<p class="lead">
-					The background images for the slider are set directly in the HTML
-					using inline CSS. The images in this snippet are from
-					<a href="https://unsplash.com">Unsplash</a>, taken by
-					<a href="https://unsplash.com/@joannakosinska">Joanna Kosinska</a>!
-				</p>
+				<h1 id="addr"></h1>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-6">
+						<!-- Property Image -->
+						<img
+							src="dashboard/assets/img/property_thumb/property_default.png"
+							id="property-house"
+							alt="image not found"
+							class="property-image"
+						/>
+
+						<!-- Property Info -->
+
+						<div class="row">
+							<div class="col-2">
+								<i class="fas fa-bed" aria-hidden="true"></i>
+								<span id="bedrooms"></span>
+								<!-- end col-md-1 -->
+							</div>
+
+							<div class="col-2">
+								<i class="fas fa-bath" aria-hidden="true"></i>
+								<span id="bathrooms"></span>
+								<!-- end col-md-1 -->
+							</div>
+
+							<div class="col-2">
+								<i class="fas fa-couch" aria-hidden="true"></i>
+								<span id="lounge"></span>
+								<!-- end col-md-1 -->
+							</div>
+
+							<div class="col-2">
+								<i class="fas fa-utensils" aria-hidden="true"></i>
+								<span id="dinning"></span>
+								<!-- end col-md-1 -->
+							</div>
+
+							<div class="col-2">
+								<i class="fas fa-car" aria-hidden="true"></i>
+								<span id="garage"></span>
+								<!-- end col-md-1 -->
+							</div>
+
+							<div class="col-2">
+								<i class="fas fa-parking" aria-hidden="true"></i>
+								<span id="carparks"></span>
+								<!-- end col-md-1 -->
+							</div>
+							<!-- end of row -->
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h6>Description</h6>
+								<p id="description"></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<div class="row">
+							<div class="title-info">
+								<p>Listed By</p>
+							</div>
+
+							<div class="col-6" style="padding: 0; margin-top: 20px;">
+								<!-- Agent Thumbnail -->
+								<img
+									src="dashboard/assets/img/agent_thumb/agent_default.png"
+									id="agent-thumbnail"
+									class="agent-thumbnail"
+								/>
+							</div>
+
+							<div class="col-6" style="margin-top: 20px;">
+								<!-- Agent Name -->
+								<h3 id="agent-name" style="margin-bottom:10px;">
+									Agent Not Found
+								</h3>
+								<!-- Agent Mobile -->
+								<h4 id="agent-mobile" style="margin-bottom:10px;">(M)</h4>
+								<!-- Agent Work -->
+								<h4 id="agent-work" style="margin-bottom:10px;">(W)</h4>
+
+								<div class="title-info" style="margin-bottom:10px;">
+									<p>Company</p>
+								</div>
+								<!-- Company Name -->
+								<h5 id="company-name" style="margin-bottom:10px;"></h5>
+								<!-- Company Thumbnail -->
+								<img src="" id="company-thumbnail" class="company-thumbnail" />
+								<div class="col-md-6" style="text-align:center">
+									<h3>Specifications</h3>
+								</div>
+							</div>
+							<div class="col-12">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th scope="col">Land Area</th>
+											<th scope="col">Suburb</th>
+											<th scope="col">City</th>
+											<th scope="col">Region</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row" id="land-area">m<sup>2</sup></th>
+											<td id="suburb"></td>
+											<td id="city"></td>
+											<td id="region"></td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="container" style="text-align:center">
+									<h4>Sale Type</h4>
+									<h5 id="sale-type"></h5>
+								</div>
+
+								<!-- honestly I got lazy and wanted to center align 2 divs -->
+								<div class="row">
+									<div class="wishlist_add_button" style="margin: auto;"></div>
+								</div>
+								<!-- end of col-md-6 -->
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<div class="bg-model">
@@ -294,6 +428,7 @@
 	<script src="Plugins/noUIslider/nouislider.js"></script>
 	<script src="js/filter.js"></script>
 	<script src="js/wishlist.js"></script>
+	<script src="js/index.js"></script>
 	<script>
 		update_region();
 	</script>
