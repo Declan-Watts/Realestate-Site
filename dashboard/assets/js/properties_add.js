@@ -1,3 +1,5 @@
+//TODO: Fix Comments on this Page
+
 $(document).ready(function(e) {
 	//On Document Ready
 	$('#add_company_form').on('submit', function(e) {

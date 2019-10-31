@@ -1,3 +1,4 @@
+//TODO: Comment on this Page
 $(document).ready(function(e) {
 	$('#register_form').on('submit', function(e) {
 		e.preventDefault();
@@ -21,7 +22,15 @@ $(document).ready(function(e) {
 					$('#finishbutton').html('Finish');
 					document.getElementById('finishbutton').disabled = false;
 					if (pre_result == 'Email Taken') {
-						//TODO: Make it do something if email is taken
+						swal({
+							title: 'Email Currently In Use',
+							text: 'Try Logging in with that email, or Contacting support',
+							type: 'error',
+							showCancelButton: false,
+							confirmButtonClass: 'btn btn-success',
+							confirmButtonText: 'Ok, Thanks',
+							buttonsStyling: false
+						}).catch(swal.noop);
 					} else {
 						swal({
 							title: 'Account Created!',
@@ -37,7 +46,6 @@ $(document).ready(function(e) {
 					}
 				},
 				error: function(e) {
-					// TODO: Get an error page working
 					alert('Something just didnt want to work');
 					console.log(e);
 				}

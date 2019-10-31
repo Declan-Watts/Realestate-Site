@@ -1,3 +1,6 @@
+//TODO: Comment on this Page
+//TODO: Fix Comments on this Page
+
 var wishlist;
 var wishlist_loaded = 0;
 
@@ -30,6 +33,7 @@ function load_wishlist() {
 			before: function() {},
 			success: function(pre_result) {
 				let result = $.parseJSON(pre_result);
+				$('#wishlist-items').empty();
 				for (let i = 0; i < result.length; i++) {
 					$('#wishlist-items')
 						.append(`<div class="col-12" style="padding-bottom: 10px;>
@@ -69,5 +73,11 @@ function add_to_wishlist(id) {
 			console.log(pre_result);
 			update_wishlist();
 		}
+	});
+}
+
+function wishlist_remove_house(House_ID) {
+	$.ajax({
+		url: `php/wishlist` //TODO: Finish Remove House JS
 	});
 }

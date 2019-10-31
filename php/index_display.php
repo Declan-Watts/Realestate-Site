@@ -26,7 +26,7 @@ while ($row = mysqli_fetch_assoc($result)) { // fetches all rows from 'houses' w
   $Thumbnail = $row["Thumbnail"];
   $House_ID = $row["House_ID"];
 
-  array_push($return_arr, array( // adds below text to empty array "$return_arr" 
+  array_push($return_arr, array( // adds below text to empty array "$return_arr"
     'Bedrooms' => $Bedrooms,
     'Landarea' => $LandArea,
     'Bathrooms' => $Bathrooms,
@@ -42,7 +42,8 @@ while ($row = mysqli_fetch_assoc($result)) { // fetches all rows from 'houses' w
     'Post' => $Post,
     'Region' => $Region,
     'Description' => $Description,
-    'Thumbnail' => $Thumbnail));
+    'Thumbnail' => $Thumbnail,
+    'House_ID' => $House_ID));
 
 }
 
@@ -50,21 +51,21 @@ $query = "SELECT * FROM Agent_Houses WHERE House_ID ='$House_ID' "; // selects a
 $result = mysqli_query($db, $query); // returns result
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $Agent_ID = $row['Agent_ID'];
+  $Agent_ID = $row['Agent_ID'];
 }
 
 $query = "SELECT * FROM Agents WHERE Agent_ID ='$Agent_ID' ";
 $result = mysqli_query($db, $query); // returns result
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $Agent_ID = $row['Agent_ID'];
-    $Company_ID = $row['Company_ID'];
-    $Agent_Thumbnail = $row['Thumbnail'];
-    $Agent_Name = $row['Agent_Name'];
-    $Agent_Work = $row['Agent_Work'];
-    $Agent_Mobile = $row['Agent_Mobile'];
+  $Agent_ID = $row['Agent_ID'];
+  $Company_ID = $row['Company_ID'];
+  $Agent_Thumbnail = $row['Thumbnail'];
+  $Agent_Name = $row['Agent_Name'];
+  $Agent_Work = $row['Agent_Work'];
+  $Agent_Mobile = $row['Agent_Mobile'];
 
-array_push($return_arr, array(
+  array_push($return_arr, array(
     'Agent_ID' => $Agent_ID,
     'Company_ID' => $Company_ID,
     'Agent_Thumbnail' => $Agent_Thumbnail,
@@ -74,18 +75,18 @@ array_push($return_arr, array(
 
 }
 
-$query ="SELECT * FROM Company WHERE Company_ID ='$Company_ID' ";
+$query = "SELECT * FROM Company WHERE Company_ID ='$Company_ID' ";
 $result = mysqli_query($db, $query); // returns result
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $Company_Thumbnail = $row['Company_Thumbnail'];
-    $Company_Name = $row['Company_Name'];
+  $Company_Thumbnail = $row['Company_Thumbnail'];
+  $Company_Name = $row['Company_Name'];
 
-array_push($return_arr, array(
+  array_push($return_arr, array(
     'Company_Thumbnail' => $Company_Thumbnail,
     'Company_Name' => $Company_Name));
 
 }
-echo json_encode($return_arr); // encodes array as .json and sends back to js 
+echo json_encode($return_arr); // encodes array as .json and sends back to js
 
 ?>

@@ -1,4 +1,6 @@
 <?php
+//TODO: Comment on this Page
+
 require_once '../Plugins/PHPMailer/PHPMailer/PHPMailerAutoload.php';
 class Mail {
   //This is a class for sending mail using the phpmailer

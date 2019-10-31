@@ -183,7 +183,6 @@
 												enctype="multipart/form-data"
 												onsubmit="return false;"
 											>
-												<!-- TODO: Fix the time error -->
 												<div class="row">
 													<label class="col-sm-2 col-md-1 col-form-label"
 														>Bedrooms</label

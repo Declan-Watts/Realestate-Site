@@ -1,4 +1,5 @@
 <?php
+//TODO: Comment on this Page
 
 include_once '../../../php/config.php';
 
@@ -20,7 +21,7 @@ $Postcode = $_POST['Postcode'];
 $Region = $_POST['Region'];
 $description = $_POST['description'];
 
-$query = "UPDATE `Houses` SET 
+$query = "UPDATE `Houses` SET
 `Status` = 'For Sale',
 `Bedrooms` = $Bedrooms,
 `Landarea` =  $LArea,
@@ -36,6 +37,6 @@ $query = "UPDATE `Houses` SET
 `Suburb` = '$Suburb',
 `Closing_Date` = '$CloseDate',
 `Addr` = '$Address',
-`Post` = '$Postcode' 
+`Post` = '$Postcode'
 WHERE `House_ID` ='$house_id' ";
 mysqli_query($db, $query);

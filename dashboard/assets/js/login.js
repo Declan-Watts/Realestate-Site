@@ -1,3 +1,4 @@
+//TODO: Comment Page
 $(document).ready(function(e) {
 	$('.form').on('submit', function(e) {
 		e.preventDefault();
@@ -8,14 +9,11 @@ $(document).ready(function(e) {
 			contentType: false,
 			cache: false,
 			processData: false,
-			beforeSend: function() {
-				// TODO: Do something here
-			},
+			beforeSend: function() {},
 			success: function(pre_result) {
 				console.log(pre_result);
 				let result = $.parseJSON(pre_result);
 				if (result.Result == 'Success') {
-					//TODO: Do a check to see if user has verified and see what role he is
 					if (result.Role == 'Admin') {
 						window.location = 'index.html';
 					} else if (result.Role == 'Pending Verification') {
@@ -60,7 +58,6 @@ $(document).ready(function(e) {
 				}
 			},
 			error: function(e) {
-				// TODO: Get an error page working
 				alert('Something just didnt want to work');
 				console.log(e);
 			}

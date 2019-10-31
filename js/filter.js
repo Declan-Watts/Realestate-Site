@@ -1,3 +1,5 @@
+//TODO: Fix Comments on this Page
+
 function update_region() {
 	//When the category chosen is changed, this is run to empty the old
 	// sub categories

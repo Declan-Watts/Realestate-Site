@@ -58,7 +58,7 @@ function load_property() {
 			//wishlist button
 			$('.wishlist_add_button')
 				.append(`<div class="col-12" style="text-align:center">
-            <button class="btn btn-primary" onclick="add_to_wishlist(${house_id})">Add To Wishlist</button>
+            <button class="btn btn-primary" onclick="add_to_wishlist(${result[0].House_ID})">Add To Wishlist</button>
             </div>
             `);
 		}
