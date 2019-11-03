@@ -36,13 +36,16 @@ function load_wishlist() {
 				$('#wishlist-items').empty();
 				for (let i = 0; i < result.length; i++) {
 					$('#wishlist-items')
-						.append(`<div class="col-12" style="padding-bottom: 10px;>
+						.append(`<div id="wishlist-item-${result[i].House_ID}"><div class="col-12" style="padding-bottom: 10px;>
 		<div class="wishlist-item">
 		<div class="row">
-			<div class="col-3"><img style="width: 100%;" 
+			<div class="col-3">		<a href="property.php?house_id=${result[i].House_ID}">
+			<img style="width: 100%;" 
 			src="dashboard/assets/img/property_thumb/${result[i].Thumbnail}"
-		/></div>
-			<div class="col-7"><h1>${result[i].Name}</h1></div>
+		/></a></div>
+			<div class="col-7">		<a href="property.php?house_id=${result[i].House_ID}">
+			<h1>${result[i].Name}</h1></a></div>
+			
 			<div class="col-2">
 				<a
 					href="javascript:void(0)"
@@ -54,6 +57,7 @@ function load_wishlist() {
 			</div>
 		</div>
 		</div>
+	</div>
 	</div>`);
 				}
 
@@ -78,6 +82,11 @@ function add_to_wishlist(id) {
 
 function wishlist_remove_house(House_ID) {
 	$.ajax({
-		url: `php/wishlist` //TODO: Finish Remove House JS
+		url: `php/wishlist_remove_house.php?id=${House_ID}`,
+		type: 'get',
+		before: function() {},
+		success: function(pre_result) {
+			$(`#wishlist-item-${House_ID}`).empty();
+		}
 	});
 }
