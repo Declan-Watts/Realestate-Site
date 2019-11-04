@@ -74,7 +74,14 @@ function add_to_wishlist(id) {
 		type: 'get', //method
 		// This is run once a response from the server has been received.
 		success: function(pre_result) {
-			console.log(pre_result);
+			swal({
+				title: 'Added to Wishlist',
+				type: 'success',
+				showCancelButton: false,
+				confirmButtonClass: 'btn btn-success',
+				confirmButtonText: 'Thank You!',
+				buttonsStyling: false
+			}).catch(swal.noop);
 			update_wishlist();
 		}
 	});

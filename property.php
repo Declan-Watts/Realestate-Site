@@ -63,9 +63,6 @@
 								><i class="fas fa-heart"></i
 							></a>
 						</li>
-						<li class="nav-item">
-							<a href="bread.html" class="nav-link bread">Learn</a>
-						</li>
 					</ul>
 				</div>
 			</div>
@@ -287,6 +284,9 @@
 	<script src="Plugins/noUIslider/nouislider.js"></script>
 	<script src="js/filter.js"></script>
 	<script src="js/property.js"></script>
+	<!--  Plugin for Sweet Alert -->
+	<script src="dashboard/assets/js/plugins/sweetalert2.js"></script>
+
 	<script src="js/wishlist.js"></script>
 
 	<script>
