@@ -1,4 +1,3 @@
-//TODO: Comment on this Page
 $(document).ready(function(e) {
 	$('#register_form').on('submit', function(e) {
 		e.preventDefault();

@@ -1,5 +1,4 @@
 <?php
-//TODO: Comment on this Page
 
 include_once 'mailsend.php';
 include_once 'config.php';

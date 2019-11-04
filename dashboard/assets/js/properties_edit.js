@@ -1,6 +1,3 @@
-//TODO: Comment on this Page
-//TODO: Fix Commens on this Page
-
 function fill_form(house_id) {
 	$.ajax({
 		type: 'POST',
@@ -37,7 +34,7 @@ $(document).ready(function(e) {
 		// On Submit Run Function
 		e.preventDefault();
 		$.ajax({
-			//Run AJAX to contact.php and post the form data
+			//Run AJAX to properties_edit.php and post the form data
 			url: `assets/php/properties_edit_add.php`,
 			type: 'POST',
 			data: new FormData(this),

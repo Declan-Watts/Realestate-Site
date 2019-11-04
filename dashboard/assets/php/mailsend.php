@@ -1,5 +1,4 @@
 <?php
-//TODO: Comment on this Page
 
 require_once '../../../Plugins/PHPMailer/PHPMailer/PHPMailerAutoload.php';
 class Mail {

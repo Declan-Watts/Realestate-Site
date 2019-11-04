@@ -1,4 +1,3 @@
-//TODO: Comment on this Page
 $.ajax({
 	url: `assets/php/check_login.php`,
 	type: 'get',

@@ -1,4 +1,3 @@
-//TODO: Comment Page
 $(document).ready(function(e) {
 	$('.form').on('submit', function(e) {
 		e.preventDefault();

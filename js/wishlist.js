@@ -1,6 +1,3 @@
-//TODO: Comment on this Page
-//TODO: Fix Comments on this Page
-
 var wishlist;
 var wishlist_loaded = 0;
 

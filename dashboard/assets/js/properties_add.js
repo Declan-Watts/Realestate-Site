@@ -1,12 +1,10 @@
-//TODO: Fix Comments on this Page
-
 $(document).ready(function(e) {
 	//On Document Ready
 	$('#add_company_form').on('submit', function(e) {
 		// On Submit Run Function
 		e.preventDefault();
 		$.ajax({
-			//Run AJAX to contact.php and post the form data
+			//Run AJAX to company_add.php and post the form data
 			url: `assets/php/company_add.php`,
 			type: 'POST',
 			data: new FormData(this),
@@ -29,7 +27,7 @@ $(document).ready(function(e) {
 		// On Submit Run Function
 		e.preventDefault();
 		$.ajax({
-			//Run AJAX to contact.php and post the form data
+			//Run AJAX to agent_add.php and post the form data
 			url: `assets/php/agent_add.php`,
 			type: 'POST',
 			data: new FormData(this),
@@ -52,7 +50,7 @@ $(document).ready(function(e) {
 		// On Submit Run Function
 		e.preventDefault();
 		$.ajax({
-			//Run AJAX to contact.php and post the form data
+			//Run AJAX to property_add.php and post the form data
 			url: `assets/php/property_add.php`,
 			type: 'POST',
 			data: new FormData(this),

@@ -1,7 +1,4 @@
 <?php
-//TODO: Comment on this Page
-
-//TODO: Finish Remove House
 
 include_once 'config.php';
 $id = $_GET['id'];
