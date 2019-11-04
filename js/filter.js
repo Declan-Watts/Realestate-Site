@@ -125,7 +125,11 @@ function session_filter_load() {
 		// This is run once a response from the server has been received.
 		success: function(pre_result) {
 			let result = $.parseJSON(pre_result);
+			console.log(result);
 			document.getElementById('Region_sel').value = result[0].region;
+			$('#City_sel').append(
+				`<option value="${result[0].city}" selected>${result[0].city}</option>`
+			);
 			document.getElementById('City_sel').value = result[0].city;
 			document.getElementById('Bedrooms').value = result[0].bedrooms;
 			document.getElementById('Bathrooms').value = result[0].bathrooms;
